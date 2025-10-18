@@ -4,6 +4,8 @@
   --accent: #40c4ff;
   --accent-dark: #0077c2;
   --card-bg: #1a1c23;
+  --input-bg: #22252f;
+  --input-border: #3a3f4a;
 }
 
 * {
@@ -69,6 +71,49 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* --- Contact Form --- */
+
+form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 500;
+}
+
+input, textarea {
+  background: var(--input-bg);
+  color: var(--fg);
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+button {
+  align-self: flex-start;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: var(--accent-dark);
 }
 
 @media (max-width: 600px) {
